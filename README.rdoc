@@ -1,0 +1,10 @@
+== README
+
+How to run this application:
+
+Open terminal and run:
+
+bundle install
+rake db:create && rake db:migrate
+rake db:seed
+rails s

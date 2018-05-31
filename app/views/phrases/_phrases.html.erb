@@ -1,0 +1,9 @@
+<div id="phrases-list">
+  There are <%= @random_phrase.remaining_count %> phrases remains
+
+  <p>
+    <% @random_phrase.phrases.each do |phrase| %>
+	<%= phrase.value %> <br />
+	<% end %> 
+  </p>
+</div>
