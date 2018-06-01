@@ -12,7 +12,6 @@ class PhrasesController < ApplicationController
   def clear
     @random_phrase = RandomPhraseService.new(session[:user_key])
     @random_phrase.clear
-    redirect_to root_path
   end
   
 end
