@@ -1,8 +1,8 @@
 <div align="center">
   <h1>Welcome To Random Phrases Generations App<h1>
 	  
-  <p><%= link_to "Get Phrase", "/random" %> | <%= link_to "Clear Phrase", "/clear" %></p>
+  <p><%= link_to "Get Phrase", "/random", remote: true %> | <%= link_to "Clear Phrase", "/clear" %></p>
   
-  <%= render "phrases" %>
+  <%= render "phrases"%>
   
 </div>

@@ -7,7 +7,6 @@ class PhrasesController < ApplicationController
   def random
     @random_phrase = RandomPhraseService.new(session[:user_key])
     @random_phrase.perform
-    render :index
   end
   
   def clear
