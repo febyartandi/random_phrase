@@ -9,8 +9,14 @@ class RandomPhraseService
     self.remaining_count = Phrase.count
   end
   
+  #Find current phrases
+  def find_current_phrases
+    self.phrases = Phrase.where(id: SessionPhrase.where(session_key: session_key).pluck(:phrase_id))
+    self.remaining_count = un_displayed_phrases.count
+  end
+  
   # Find current phrases and next phrase
-  def perform
+  def perform_random
     self.phrases = Phrase.where(id: SessionPhrase.where(session_key: session_key).pluck(:phrase_id))
     add_more_phrase
     self.remaining_count = un_displayed_phrases.count
